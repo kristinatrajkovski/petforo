@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  .bcontainer {
+    padding-bottom: 15vh;
+    height: 92%;
+  position: fixed;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 100px;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  display: inline-block;
+  background-color: rgb(221, 216, 216);
+  }
+  
+  
+.pos {
+    width: 100%;
+    height: 92%;
+  left: 0;
+  background-color: rgb(221, 216, 216);
+  color: black;
+  padding-left: 20vh;
+}
+
+</style>
+<div class="bcontainer pos">
+<button type="button" class="pinkblock">
+    <span>Put Animal Up for Adoption</span> <br><br>
+    <span class="icon">
+        <i class="fas fa-hand-holding-heart"></i>
+    </span>
+  </button>
+<br><br>
+
+<div class="select"> <!-- is the dropdrown for animal species using bulma -->
+  <select>
+    <option>Select an Animal Species</option>
+    <option>Cat</option>
+    <option>Dog</option>
+    <option>Fish</option>
+    <option>Guinea Pig</option>
+    <option>Pig</option>
+    <option>Tortoise</option>
+    <option>Raccoon</option>
+    <option>Fox</option>
+    <option>Bird</option>
+    <option>Rabbit</option>
+    <option>Horse</option>
+    <option>Ferret</option>
+    <option>Rat</option>
+    <option>Goat</option>
+    <option>Hedgehog</option>
+    <option>Hamster</option>
+    <option>Gerbils</option>
+    <option>Reptile</option>
+  </select>
+</div>
+
+  <div class="columns"> <!-- text inputs for info-->
+    <div class="column is-one-third">
+      <input class="input" type="text" placeholder="Breed"></input>
+      <input class="input" type="text" placeholder="Age in years"></input>
+      <input class="input" type="text" placeholder="Location"></input>
+    </div>
+  </div>
+
+  <div class="columns"> <!-- medical history section-->
+    <div class="column is-one-third">
+      <div>
+        <p>
+          Medical History
+        </p>
+      </div>
+      <textarea class="textarea" placeholder="e.g. vaccinations, past surgeries"></textarea>
+    </div>
+  </div>
+
+  <label class="checkbox"> <!-- check boxes for more info-->
+    <input type="checkbox">
+    Purebred
+  </label>
+  <br></br>
+  <label class="checkbox">
+    <input type="checkbox">
+    Spayed / Neutered
+  </label>
+  <br></br>
+
+  <div> <!-- you made this part, this is the upload picture and submit button-->
+    <div class="file">
+        <label class="file-label">
+          <input class="file-input" type="file" name="resume">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Upload Photos
+            </span>
+          </span>
+        </label>
+      </div><br><br>
+      <a class="button is-danger">
+        Save
+      </a>
+    </div>
+
+  </div>
+{% endblock %}
